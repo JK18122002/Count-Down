@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/custom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Countdown</title>
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <div class="main">
-        <div class="overlay">
-            <div class="title">We are Coming Soon</div>
-            <div class="title" id="end-date">2 July 2025 10:00 PM</div>
-            <div class="col">
-                <div>
-                    <input type="text" readonly>
-                    <br/>
-                    <label for="">Days</label>
-                </div>
-                <div>
-                    <input type="text" readonly>
-                    <br/>
-                    <label for="">Hours</label>
-                </div>
-                <div>
-                    <input type="text" readonly>
-                    <br/>
-                    <label for="">Minutes</label>
-                </div>
-                <div>
-                    <input type="text" readonly>
-                    <br/>
-                    <label for="">Seconds</label>
-                </div>
-            </div>
+  <div class="container">
+    <div class="countdown-card">
+      <h1 class="title">Countdown Timer ⏳</h1>
+      <p class="subtitle" id="end-date">Select target date & time</p>
+
+      <!-- Countdown Display -->
+      <div class="countdown-display">
+        <div class="time-box">
+          <div class="digit" id="days">00</div>
+          <label>Days</label>
         </div>
+        <div class="time-box">
+          <div class="digit" id="hours">00</div>
+          <label>Hours</label>
+        </div>
+        <div class="time-box">
+          <div class="digit" id="minutes">00</div>
+          <label>Minutes</label>
+        </div>
+        <div class="time-box">
+          <div class="digit" id="seconds">00</div>
+          <label>Seconds</label>
+        </div>
+      </div>
+
+      <!-- Date & Time Inputs -->
+      <div class="manual-container">
+        <div class="input-column">
+          <label for="date-picker">Date</label>
+          <input type="date" id="date-picker">
+        </div>
+
+        <div class="input-column">
+          <label for="time-picker">Time</label>
+          <input type="time" id="time-picker">
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="buttons">
+        <button id="set-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="reset-btn" disabled>Reset</button>
+      </div>
+
+      <!-- Error Message -->
+      <p id="error-msg" class="error-msg"></p>
     </div>
+  </div>
 
-
-
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
